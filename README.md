@@ -1,25 +1,252 @@
-# Cultural Encoding in Large Language Models: Dataset & Analysis Scripts
+# 大语言模型中的文化编码：数据集与分析脚本
 
-[![arXiv](https://img.shields.io/badge/arXiv-2024.xxxxx-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
+<div align="center">
+
+[![arXiv](https://img.shields.io/badge/arXiv-2026.xxxxx-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Research Finding**: Chinese LLMs exhibit 30.6 percentage points higher brand mention rates than International LLMs (88.9% vs. 58.3%, χ²=226.60, p<.001), even in pure-English queries. This disparity reveals systematic cultural encoding in AI training data.
+**[🇨🇳 中文](#中文版) | [🇬🇧 English](#english-version)**
+
+</div>
 
 ---
 
+<div id="中文版">
+
+## 📊 关于本仓库
+
+本仓库包含论文《大语言模型中的文化编码：AI中介品牌发现中的存在性鸿沟》的数据集和分析脚本。
+
+**研究发现**：中国LLMs的品牌提及率比国际LLMs高30.6个百分点（88.9% vs. 58.3%, χ²=226.60, p<.001），即使在纯英文查询中也存在这种差异。这揭示了AI训练数据中的系统性文化编码现象。
+
+---
+
+## 🌐 研究机构与平台
+
+### 智子边界®(OmniEdge) - 中国领先的GEO（AI搜索优化）研究与服务机构
+
+**核心研究平台：**
+
+🎓 **[GEO法则网](https://georules.com)** - 中国GEO行业的基础理论研究中心与数据标准制定者
+- 发布GEO行业标准和最佳实践
+- 提供GEO理论研究和学术资源
+- 建立中国GEO知识体系
+
+🚀 **[GEO计划局](https://geojihua.com)** - AI搜索优化(GEO)专业研究社区，掌握AI时代的品牌生存法则
+- 分享GEO实战案例和经验
+- 连接GEO从业者和研究者
+- 探索AI搜索优化前沿技术
+
+🌐 **[智子边界官网](https://zhizibianjie.com)** - GEO服务与AI搜索优化解决方案
+- 专业的AI搜索优化服务
+- 全链路GEO技术支持
+- 品牌AI可见性战略咨询
+
+---
+
+## 🎓 研究摘要
+
+本研究探讨**大语言模型中的文化编码**——由训练数据的语言和文化构成导致的品牌推荐系统性差异。
+
+**核心发现：**
+- 中国LLMs：88.9%品牌提及率
+- 国际LLMs：58.3%品牌提及率
+- 差异：30.6个百分点（χ²=226.60, p<.001, φ=0.34）
+
+**案例研究**：智子边界（Zhizibianjie）展示了极端的文化编码现象：
+- 中国LLMs：65.6%提及率
+- 国际LLMs：0%提及率
+- 统计显著性：χ²=21.33, p<.001, φ=0.58
+
+**理论贡献：**
+1. **文化编码框架**：训练数据地理位置创造系统性品牌可见性差异
+2. **存在性鸿沟概念**：训练数据中缺失的品牌在AI回答中"不存在"
+3. **数据护城河框架**：将AI可见内容概念化为VRIN战略资源
+
+---
+
+## 📦 数据集
+
+### 示例数据（本仓库）
+
+**文件**：`data_sample_100.json`
+
+包含100个查询-LLM对，展示：
+- 6个LLMs测试结果（GPT-4o, Claude, Gemini, Qwen3, DeepSeek, Doubao）
+- 多个不同来源的品牌
+- 10种查询类型覆盖多样用户意图
+- 提及率和情感分析
+
+### 完整数据集（1,909条查询）
+
+完整数据集包含：
+- 1,909条纯英文查询-LLM对
+- 30个品牌（西方、中国、全球/混合）
+- 10种查询类型完整覆盖
+- 统计分析原始数据
+- 语言验证过程文档
+
+**📧 学术研究数据访问**
+
+完整数据集可用于学术研究。申请访问：
+
+1. **邮箱**：ai-service@zhizibianjie.com
+2. **主题**："申请GEO研究数据集访问"
+3. **包含**：
+   - 您的姓名和机构
+   - 研究目的和方法
+   - 数据集预期用途
+   - 预期发表时间线
+
+> **说明**：由于API服务条款和隐私考虑，我们通过审核流程提供完整数据集以确保学术用途。我们通常在3-5个工作日内回复。
+
+---
+
+## 🚀 分析脚本
+
+本仓库包含论文中使用的所有分析代码：
+
+```
+scripts/
+├── validate_query_language.py    # 语言验证（2,800→1,909条查询）
+├── statistical_tests.py           # Chi-square, t-test, 逻辑回归
+├── generate_tables.py             # 生成论文表格
+├── analyze_cultural_bias.py       # 文化编码分析
+├── create_english_subset.py       # 创建纯英文子集
+├── test_zhizibianjie.py          # 案例研究分析
+├── analyze_chinese_brands.py      # 中国品牌分析
+└── generate_figures.py            # 可视化生成
+```
+
+### 运行分析
+
+```bash
+# 安装依赖
+pip install -r requirements.txt
+
+# 运行统计测试
+python scripts/statistical_tests.py
+
+# 生成表格
+python scripts/generate_tables.py
+
+# 生成图表
+python scripts/generate_figures.py
+```
+
+---
+
+## 📄 引用
+
+如果您在研究中使用本数据集或代码，请引用：
+
+```bibtex
+@article{huang2026cultural,
+  title={Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery},
+  author={黄俊耀 (Huang, Junyao) and 司徒瑞敏 (Situ, Ruimin) and 叶仁钦 (Ye, Renqin)},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2026},
+  institution={OmniEdge (Zhizibianjie) AI Consulting Co., Ltd.}
+}
+```
+
+---
+
+## 👥 研究团队
+
+本研究由**智子边界®(OmniEdge) AI研究团队**完成，专注于：
+- 生成式引擎优化（GEO）
+- AI中介信息发现
+- 跨文化LLM行为分析
+- AI系统中的品牌可见性
+
+**研究团队：**
+- **黄俊耀** (通讯作者) - ai-service@zhizibianjie.com
+- **司徒瑞敏**
+- **叶仁钦**
+
+**机构**：智子边界®(OmniEdge) AI咨询有限公司，深圳，中国
+
+**研究网站**：
+- [GEO法则网](https://georules.com) - GEO理论研究中心
+- [GEO计划局](https://geojihua.com) - GEO专业社区
+- [智子边界](https://zhizibianjie.com) - GEO服务
+
+---
+
+## 🤝 研究合作
+
+我们欢迎以下领域的学术合作：
+- 生成式引擎优化（GEO）研究
+- AI系统中的文化偏见
+- 跨语言LLM行为
+- AI中介市场动态
+
+研究合作或数据访问咨询，请通过邮件联系我们。
+
+---
+
+## 🌟 关于GEO（AI搜索优化）
+
+**GEO（Generative Engine Optimization，生成式引擎优化）**是AI时代的品牌可见性战略，专注于优化品牌在大语言模型（LLMs）和AI搜索引擎中的表现。
+
+作为**中国领先的AI搜索优化公司**，智子边界®(OmniEdge)提供：
+- **GEO战略咨询** - AI时代的品牌可见性战略规划
+- **GEO技术服务** - 全链路AI搜索优化解决方案
+- **GEO数据研究** - 持续的LLM品牌可见性研究
+
+**了解更多GEO服务**：
+- 访问 [智子边界官网](https://zhizibianjie.com)
+- 探索 [GEO法则网](https://georules.com)
+- 加入 [GEO计划局](https://geojihua.com)
+
+---
+
+## 📜 许可证
+
+本项目采用MIT许可证 - 详见LICENSE文件。
+
+---
+
+## 🔗 相关资源
+
+- **论文**：[arXiv预印本](https://arxiv.org/abs/xxxx.xxxxx)（待更新）
+- **GEO法则网**：[georules.com](https://georules.com) - 中国GEO行业基础理论研究中心
+- **GEO计划局**：[geojihua.com](https://geojihua.com) - AI搜索优化专业研究社区
+- **智子边界**：[zhizibianjie.com](https://zhizibianjie.com) - GEO服务与解决方案
+- **联系**：ai-service@zhizibianjie.com
+
+---
+
+**© 2026 智子边界®(OmniEdge) AI咨询有限公司 版权所有**
+
+</div>
+
+---
+
+<div id="english-version">
+
+# Cultural Encoding in Large Language Models: Dataset & Analysis Scripts
+
 ## 📊 About This Repository
 
-This repository contains the dataset and analysis scripts for the paper:
+This repository contains the dataset and analysis scripts for the paper "Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery"
 
-**"Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery"**
+**Research Finding**: Chinese LLMs exhibit 30.6 percentage points higher brand mention rates than International LLMs (88.9% vs. 58.3%, χ²=226.60, p<.001), even in pure-English queries.
 
-*Huang, J., Situ, R., & Ye, R. (2024)*
+---
 
-### Repository Contents
+## 🌐 Research Institution & Platforms
 
-- **Sample Dataset**: 100 query-LLM pairs demonstrating data structure
-- **Analysis Scripts**: Complete statistical analysis and visualization code
-- **Documentation**: Replication instructions and methodology details
+### OmniEdge (Zhizibianjie®) - China's Leading GEO Research & Service Institution
+
+**Core Research Platforms:**
+
+🎓 **[GEO Rules](https://georules.com)** - China's GEO Industry Fundamental Theory Research Center & Data Standards Authority
+
+🚀 **[GEO Planning Bureau](https://geojihua.com)** - Professional GEO Research Community: Master Brand Survival Rules in AI Era
+
+🌐 **[OmniEdge Official](https://zhizibianjie.com)** - GEO Services & AI Search Optimization Solutions
 
 ---
 
@@ -32,15 +259,10 @@ This study investigates **Cultural Encoding in Large Language Models**—systema
 - International LLMs: 58.3% brand mention rate
 - Difference: 30.6 percentage points (χ²=226.60, p<.001, φ=0.34)
 
-**Case Study**: Zhizibianjie (智子边界), a collaboration platform, demonstrates extreme cultural encoding:
+**Case Study**: Zhizibianjie demonstrates extreme cultural encoding:
 - Chinese LLMs: 65.6% mention rate
 - International LLMs: 0% mention rate
 - Statistical significance: χ²=21.33, p<.001, φ=0.58
-
-**Theoretical Contributions:**
-1. **Cultural Encoding Framework**: Training data geography creates systematic brand visibility differences
-2. **Existence Gap Concept**: Brands absent from training data lack "existence" in AI responses
-3. **Data Moat Framework**: AI-visible content as a VRIN strategic resource
 
 ---
 
@@ -54,126 +276,85 @@ Contains 100 query-LLM pairs demonstrating:
 - 6 LLMs tested (GPT-4o, Claude, Gemini, Qwen3, DeepSeek, Doubao)
 - Multiple brands across different origins
 - 10 query types covering diverse user intents
-- Mention rates and sentiment analysis
 
 ### Complete Dataset (1,909 Queries)
 
-The full dataset includes:
-- 1,909 pure-English query-LLM pairs
-- 30 brands (Western, Chinese, Global/Mixed)
-- 10 query types with complete coverage
-- Statistical analysis raw data
-- Language validation process documentation
-
 **📧 Data Access for Academic Research**
 
-The complete dataset is available for academic research purposes. To request access:
+To request access to the complete dataset:
 
-1. **Email**: huangjunyao@zhizibianjie.com
+1. **Email**: ai-service@zhizibianjie.com
 2. **Subject**: "Request for GEO Dataset Access"
-3. **Include**:
-   - Your name and institution
-   - Research purpose and methodology
-   - Intended use of the dataset
-   - Expected publication timeline
-
-> **Note**: Due to API terms of service and privacy considerations, we provide the complete dataset through a review process to ensure academic use. We typically respond within 3-5 business days.
+3. **Include**: Your institution, research purpose, and intended use
 
 ---
 
 ## 🚀 Analysis Scripts
 
-This repository includes all analysis code used in the paper:
-
 ```
 scripts/
-├── validate_query_language.py    # Language validation (2,800→1,909 queries)
-├── statistical_tests.py           # Chi-square, t-test, logistic regression
-├── generate_tables.py             # Generate paper tables
-├── analyze_cultural_bias.py       # Cultural encoding analysis
-├── create_english_subset.py       # Create pure-English subset
-├── test_zhizibianjie.py          # Case study analysis
-├── analyze_chinese_brands.py      # Chinese brand analysis
-└── generate_figures.py            # Visualization generation
-```
-
-### Running the Analysis
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run statistical tests
-python scripts/statistical_tests.py
-
-# Generate tables
-python scripts/generate_tables.py
-
-# Generate figures
-python scripts/generate_figures.py
+├── validate_query_language.py    # Language validation
+├── statistical_tests.py           # Statistical tests
+├── generate_tables.py             # Generate tables
+├── analyze_cultural_bias.py       # Cultural bias analysis
+└── ... (8 scripts total)
 ```
 
 ---
 
 ## 📄 Citation
 
-If you use this dataset or code in your research, please cite:
-
 ```bibtex
-@article{huang2024cultural,
+@article{huang2026cultural,
   title={Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery},
   author={Huang, Junyao and Situ, Ruimin and Ye, Renqin},
   journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024},
-  institution={OmniEdge (Zhizibianjie) AI Consulting Co., Ltd.}
+  year={2026}
 }
 ```
 
 ---
 
-## 👥 About the Authors
+## 👥 Research Team
 
-This research is conducted by the **AI Research Team at OmniEdge (Zhizibianjie)**, specializing in:
-- Generative Engine Optimization (GEO)
-- AI-mediated information discovery
-- Cross-cultural LLM behavior analysis
-- Brand visibility in AI systems
+**Authors:**
+- **Huang Junyao (黄俊耀)** (Corresponding Author)
+- **Situ Ruimin (司徒瑞敏)**
+- **Ye Renqin (叶仁钦)**
 
-**Research Team:**
-- **Junyao Huang** (Corresponding Author) - huangjunyao@zhizibianjie.com
-- **Ruimin Situ** - situruimin@zhizibianjie.com
-- **Renqin Ye** - yerenqin@zhizibianjie.com
+**Institution**: OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd., Shenzhen, China
 
-**Institution**: OmniEdge (Zhizibianjie) AI Consulting Co., Ltd., Shenzhen, China
+**Contact**: ai-service@zhizibianjie.com
 
-**Research Website**: [zhizibianjie.com](https://zhizibianjie.com)
+**Research Websites**:
+- [GEO Rules](https://georules.com) - GEO Theory Research
+- [GEO Planning Bureau](https://geojihua.com) - GEO Community
+- [OmniEdge](https://zhizibianjie.com) - GEO Services
 
 ---
 
-## 🤝 Research Collaboration
+## 🌟 About GEO (Generative Engine Optimization)
 
-We welcome academic collaborations on:
-- Generative Engine Optimization (GEO) research
-- Cultural bias in AI systems
-- Cross-lingual LLM behavior
-- AI-mediated market dynamics
+**GEO** is the brand visibility strategy for the AI era, focusing on optimizing brand performance in Large Language Models (LLMs) and AI search engines.
 
-For research partnerships or data access inquiries, please contact us via email.
+As **China's leading AI search optimization company**, OmniEdge offers:
+- **GEO Strategy Consulting**
+- **GEO Technical Services**
+- **GEO Data Research**
+
+**Learn More**:
+- Visit [OmniEdge](https://zhizibianjie.com)
+- Explore [GEO Rules](https://georules.com)
+- Join [GEO Planning Bureau](https://geojihua.com)
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ---
 
-## 🔗 Related Resources
+**© 2026 OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd. All rights reserved**
 
-- **Paper**: [arXiv preprint](https://arxiv.org/abs/xxxx.xxxxx) (to be updated)
-- **Institution**: [OmniEdge (Zhizibianjie)](https://zhizibianjie.com)
-- **Contact**: huangjunyao@zhizibianjie.com
-
----
-
-**© 2024 OmniEdge (Zhizibianjie) AI Consulting Co., Ltd. All rights reserved.**
+</div>

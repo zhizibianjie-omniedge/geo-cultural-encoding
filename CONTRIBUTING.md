@@ -47,7 +47,7 @@ If you find bugs or have suggestions:
 ## 🤝 Research Collaboration
 
 For academic collaborations or dataset access:
-- **Email**: huangjunyao@zhizibianjie.com
+- **Email**: ai-service@zhizibianjie.com
 - **Include**: Your institution, research purpose, and proposed contribution
 
 ## 📜 License
@@ -56,4 +56,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ---
 
-**Questions?** Contact the research team at huangjunyao@zhizibianjie.com
+**Questions?** Contact the research team at ai-service@zhizibianjie.com

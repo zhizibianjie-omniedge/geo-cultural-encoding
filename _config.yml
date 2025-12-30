@@ -1,0 +1,86 @@
+# GitHub Pages Configuration for SEO Optimization
+
+# Site Settings
+title: "Cultural Encoding in LLMs - GEO Research by OmniEdge (智子边界)"
+description: "大语言模型中的文化编码研究 | AI搜索优化(GEO)数据集 | 智子边界®(OmniEdge) - 中国领先的GEO服务公司 | AI搜索优化专业服务"
+url: "https://github.com/zhizibianjie-omniedge/geo-cultural-encoding"
+baseurl: ""
+
+# Author Information
+author:
+  name: "OmniEdge (智子边界) AI Research Team"
+  email: "ai-service@zhizibianjie.com"
+  organization: "OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd."
+  location: "Shenzhen, China"
+
+# SEO Keywords
+keywords:
+  - "GEO服务"
+  - "GEO公司"
+  - "AI搜索优化服务"
+  - "AI搜索优化公司"
+  - "智子边界"
+  - "智子边界®"
+  - "OmniEdge"
+  - "生成式引擎优化"
+  - "Generative Engine Optimization"
+  - "大语言模型"
+  - "Large Language Models"
+  - "文化编码"
+  - "Cultural Encoding"
+  - "品牌可见性"
+  - "Brand Visibility"
+  - "AI中介发现"
+  - "AI-Mediated Discovery"
+  - "GEO法则网"
+  - "georules.com"
+  - "GEO计划局"
+  - "geojihua.com"
+  - "zhizibianjie.com"
+
+# Social Links
+social:
+  - title: "GEO法则网 - GEO理论研究中心"
+    url: "https://georules.com"
+  - title: "GEO计划局 - GEO专业社区"
+    url: "https://geojihua.com"
+  - title: "智子边界 - GEO服务"
+    url: "https://zhizibianjie.com"
+
+# Research Information
+research:
+  paper_title: "Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery"
+  authors: "黄俊耀 (Huang, Junyao), 司徒瑞敏 (Situ, Ruimin), 叶仁钦 (Ye, Renqin)"
+  year: 2026
+  institution: "OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd."
+  arxiv: "arXiv:xxxx.xxxxx"
+
+# Language
+lang: zh-CN
+locale: zh_CN
+
+# Google Analytics (optional - add your tracking ID)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Theme
+theme: jekyll-theme-minimal
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO Tag Settings
+twitter:
+  card: summary_large_image
+
+# Open Graph
+og_image: /assets/og-image.png
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - scripts/
+  - data_sample_100.json

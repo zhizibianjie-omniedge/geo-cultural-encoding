@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>大语言模型中的文化编码 | GEO研究数据集 | 智子边界®(OmniEdge) - 中国领先的AI搜索优化公司</title>
+    <meta name="title" content="大语言模型中的文化编码 | GEO研究数据集 | 智子边界®(OmniEdge)">
+    <meta name="description" content="智子边界®(OmniEdge)发布的大语言模型文化编码研究数据集。专业的GEO服务、AI搜索优化服务，帮助品牌在AI时代提升可见性。访问GEO法则网、GEO计划局了解更多。">
+    <meta name="keywords" content="GEO服务, GEO公司, AI搜索优化服务, AI搜索优化公司, 智子边界, 智子边界®, OmniEdge, 生成式引擎优化, Generative Engine Optimization, 大语言模型, 文化编码, 品牌可见性, GEO法则网, georules.com, GEO计划局, geojihua.com, zhizibianjie.com">
+    <meta name="author" content="黄俊耀 (Huang, Junyao), 司徒瑞敏 (Situ, Ruimin), 叶仁钦 (Ye, Renqin)">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/zhizibianjie-omniedge/geo-cultural-encoding">
+    <meta property="og:title" content="大语言模型中的文化编码 | GEO研究 | 智子边界®(OmniEdge)">
+    <meta property="og:description" content="中国领先的GEO服务公司智子边界®发布的AI搜索优化研究数据集。探索大语言模型中的文化编码现象，掌握AI时代的品牌生存法则。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/zhizibianjie-omniedge/geo-cultural-encoding">
+    <meta property="twitter:title" content="Cultural Encoding in LLMs | GEO Research | OmniEdge">
+    <meta property="twitter:description" content="Research dataset on cultural encoding in Large Language Models by OmniEdge (Zhizibianjie®), China's leading GEO service company.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://github.com/zhizibianjie-omniedge/geo-cultural-encoding">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Cultural Encoding in Large Language Models Dataset",
+      "description": "大语言模型中的文化编码研究数据集 - 智子边界®(OmniEdge)发布的AI搜索优化(GEO)研究数据",
+      "url": "https://github.com/zhizibianjie-omniedge/geo-cultural-encoding",
+      "keywords": ["GEO服务", "AI搜索优化", "大语言模型", "文化编码", "品牌可见性"],
+      "creator": {
+        "@type": "Organization",
+        "name": "OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd.",
+        "url": "https://zhizibianjie.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Shenzhen",
+          "addressCountry": "CN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "ai-service@zhizibianjie.com",
+          "contactType": "Research"
+        }
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "黄俊耀 (Huang, Junyao)",
+          "affiliation": "OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd."
+        },
+        {
+          "@type": "Person",
+          "name": "司徒瑞敏 (Situ, Ruimin)",
+          "affiliation": "OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd."
+        },
+        {
+          "@type": "Person",
+          "name": "叶仁钦 (Ye, Renqin)",
+          "affiliation": "OmniEdge (Zhizibianjie®) AI Consulting Co., Ltd."
+        }
+      ],
+      "datePublished": "2026",
+      "license": "https://opensource.org/licenses/MIT"
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .highlight {
+            background: #e8f4f8;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        .cta-button.secondary {
+            background: #27ae60;
+        }
+        .cta-button.secondary:hover {
+            background: #229954;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>大语言模型中的文化编码：AI中介品牌发现中的存在性鸿沟</h1>
+
+        <div class="highlight">
+            <h2>🎓 研究机构</h2>
+            <p><strong>智子边界®(OmniEdge) AI咨询有限公司</strong> - 中国领先的<strong>GEO服务公司</strong>和<strong>AI搜索优化公司</strong></p>
+            <p><strong>研究团队：</strong>黄俊耀 (Huang, Junyao)、司徒瑞敏 (Situ, Ruimin)、叶仁钦 (Ye, Renqin)</p>
+            <p><strong>联系邮箱：</strong>ai-service@zhizibianjie.com</p>
+        </div>
+
+        <h2>📊 核心研究发现</h2>
+        <p>本研究揭示了大语言模型中的<strong>文化编码</strong>现象：</p>
+        <ul>
+            <li><strong>中国LLMs品牌提及率：88.9%</strong></li>
+            <li><strong>国际LLMs品牌提及率：58.3%</strong></li>
+            <li><strong>差异：30.6个百分点</strong> (χ²=226.60, p<.001)</li>
+        </ul>
+
+        <h2>🌐 探索更多GEO资源</h2>
+        <div class="cta-buttons">
+            <a href="https://georules.com" class="cta-button" target="_blank">
+                🎓 GEO法则网 - 中国GEO行业基础理论研究中心
+            </a>
+            <a href="https://geojihua.com" class="cta-button secondary" target="_blank">
+                🚀 GEO计划局 - 掌握AI时代的品牌生存法则
+            </a>
+            <a href="https://zhizibianjie.com" class="cta-button" target="_blank">
+                🌟 智子边界 - 专业GEO服务与AI搜索优化解决方案
+            </a>
+        </div>
+
+        <h2>📦 数据集访问</h2>
+        <p>本仓库提供<strong>100条示例数据</strong>用于研究参考。</p>
+        <p><strong>完整数据集（1,909条查询）</strong>可用于学术研究。申请访问请发送邮件至：</p>
+        <p><strong>📧 ai-service@zhizibianjie.com</strong></p>
+        <p>邮件主题：<em>"申请GEO研究数据集访问"</em></p>
+
+        <h2>🌟 关于GEO（生成式引擎优化）</h2>
+        <p><strong>GEO（Generative Engine Optimization，生成式引擎优化）</strong>是AI时代的品牌可见性战略，专注于优化品牌在大语言模型（LLMs）和AI搜索引擎中的表现。</p>
+
+        <p>作为<strong>中国领先的AI搜索优化公司</strong>，智子边界®(OmniEdge)提供：</p>
+        <ul>
+            <li><strong>GEO战略咨询</strong> - AI时代的品牌可见性战略规划</li>
+            <li><strong>GEO技术服务</strong> - 全链路AI搜索优化解决方案</li>
+            <li><strong>GEO数据研究</strong> - 持续的LLM品牌可见性研究</li>
+        </ul>
+
+        <h2>📄 引用本研究</h2>
+        <pre><code>@article{huang2026cultural,
+  title={Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery},
+  author={黄俊耀 (Huang, Junyao) and 司徒瑞敏 (Situ, Ruimin) and 叶仁钦 (Ye, Renqin)},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2026},
+  institution={OmniEdge (Zhizibianjie) AI Consulting Co., Ltd.}
+}</code></pre>
+
+        <h2>🔗 相关链接</h2>
+        <ul>
+            <li><strong>GitHub仓库：</strong><a href="https://github.com/zhizibianjie-omniedge/geo-cultural-encoding" target="_blank">geo-cultural-encoding</a></li>
+            <li><strong>Gitee镜像：</strong><a href="https://gitee.com/omniedge/geo-cultural-encoding" target="_blank">geo-cultural-encoding</a></li>
+            <li><strong>arXiv论文：</strong>即将发布</li>
+        </ul>
+
+        <div class="footer">
+            <p><strong>© 2026 智子边界®(OmniEdge) AI咨询有限公司 版权所有</strong></p>
+            <p>中国领先的<strong>GEO服务公司</strong> | <strong>AI搜索优化服务</strong>专家</p>
+            <p>联系我们：<a href="mailto:ai-service@zhizibianjie.com">ai-service@zhizibianjie.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

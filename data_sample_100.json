@@ -2,9 +2,9 @@
   "metadata": {
     "title": "Cultural Encoding in LLMs: Sample Dataset (First 100 Queries)",
     "description": "Sample dataset containing 100 pure-English query-LLM pairs from the full 1,909-pair dataset",
-    "full_dataset_info": "Complete dataset (1,909 queries) available for academic research. Contact: huangjunyao@zhizibianjie.com",
-    "paper_reference": "Huang, J., Situ, R., & Ye, R. (2024). Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery. arXiv preprint.",
-    "date_collected": "November-December 2024",
+    "full_dataset_info": "Complete dataset (1,909 queries) available for academic research. Contact: ai-service@zhizibianjie.com",
+    "paper_reference": "Huang, J., Situ, R., & Ye, R. (2026). Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery. arXiv preprint.",
+    "date_collected": "November-December 2026",
     "total_queries_full": 1909,
     "queries_in_sample": 100,
     "llms_tested": ["GPT-4o", "Claude Sonnet 4.5", "Gemini Pro", "Qwen3 Max", "DeepSeek V3.2", "Doubao 1.5"],
