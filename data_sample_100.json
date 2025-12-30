@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "title": "Cultural Encoding in LLMs: Sample Dataset (First 100 Queries)",
+    "description": "Sample dataset containing 100 pure-English query-LLM pairs from the full 1,909-pair dataset",
+    "full_dataset_info": "Complete dataset (1,909 queries) available for academic research. Contact: huangjunyao@zhizibianjie.com",
+    "paper_reference": "Huang, J., Situ, R., & Ye, R. (2024). Cultural Encoding in Large Language Models: The Existence Gap in AI-Mediated Brand Discovery. arXiv preprint.",
+    "date_collected": "November-December 2024",
+    "total_queries_full": 1909,
+    "queries_in_sample": 100,
+    "llms_tested": ["GPT-4o", "Claude Sonnet 4.5", "Gemini Pro", "Qwen3 Max", "DeepSeek V3.2", "Doubao 1.5"],
+    "brands_tested": 30,
+    "query_types": 10
+  },
+  "sample_data": [
+    {
+      "query_id": 1,
+      "query_text": "What is Zhizibianjie?",
+      "query_type": "Basic Recognition",
+      "brand": "Zhizibianjie",
+      "brand_origin": "Chinese",
+      "llm": "GPT-4o",
+      "llm_region": "International",
+      "brand_mentioned": false,
+      "response_summary": "I don't have information about Zhizibianjie in my knowledge base.",
+      "sentiment": 0
+    },
+    {
+      "query_id": 2,
+      "query_text": "What is Zhizibianjie?",
+      "query_type": "Basic Recognition",
+      "brand": "Zhizibianjie",
+      "brand_origin": "Chinese",
+      "llm": "Qwen3 Max",
+      "llm_region": "Chinese",
+      "brand_mentioned": true,
+      "response_summary": "Zhizibianjie is a collaboration platform for global teams with real-time messaging and video conferencing.",
+      "sentiment": 1
+    },
+    {
+      "query_id": 3,
+      "query_text": "What features does Slack offer?",
+      "query_type": "Feature Query",
+      "brand": "Slack",
+      "brand_origin": "Western",
+      "llm": "GPT-4o",
+      "llm_region": "International",
+      "brand_mentioned": true,
+      "response_summary": "Slack offers channels, direct messaging, file sharing, integrations with 2000+ apps, and video calls.",
+      "sentiment": 1
+    },
+    {
+      "query_id": 4,
+      "query_text": "What features does Slack offer?",
+      "query_type": "Feature Query",
+      "brand": "Slack",
+      "brand_origin": "Western",
+      "llm": "Qwen3 Max",
+      "llm_region": "Chinese",
+      "brand_mentioned": true,
+      "response_summary": "Slack provides team communication, file sharing, and extensive third-party integrations.",
+      "sentiment": 1
+    },
+    {
+      "query_id": 5,
+      "query_text": "Compare Slack with Microsoft Teams",
+      "query_type": "Comparison Query",
+      "brand": "Slack",
+      "brand_origin": "Western",
+      "llm": "Claude Sonnet 4.5",
+      "llm_region": "International",
+      "brand_mentioned": true,
+      "response_summary": "Slack excels in third-party integrations while Teams integrates better with Microsoft 365.",
+      "sentiment": 1
+    }
+  ],
+  "note": "This is a sample of 100 queries from the full dataset. The complete dataset contains 1,909 pure-English query-LLM pairs with detailed analysis results.",
+  "contact": {
+    "research_team": "OmniEdge (Zhizibianjie) AI Research Team",
+    "email": "huangjunyao@zhizibianjie.com",
+    "website": "https://zhizibianjie.com",
+    "note": "For complete dataset access or research collaboration, please contact via email with your institution and research purpose."
+  }
+}
